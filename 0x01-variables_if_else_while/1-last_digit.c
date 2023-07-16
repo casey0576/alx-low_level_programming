@@ -1,5 +1,5 @@
+#include <stidio.h>
 #include <time.h>
-#include <stdio.h>
 
 /**
  * main - Prints the last digit of a randomly generated number
@@ -33,4 +33,3 @@ int main(void)
 	return (0);
 
 }
-
