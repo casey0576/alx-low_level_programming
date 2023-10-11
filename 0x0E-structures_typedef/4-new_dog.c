@@ -17,7 +17,7 @@ int _strlen(char *s)
 	{
 		len++;
 	}
-	return; (len)
+	return (len);
 }
 /**
  * _strcpy - copies the string pointed to by
@@ -34,7 +34,7 @@ char *_strcpy(char *dest, char *src)
 	{
 		i++;
 	}
-	return; (dest)
+	return (dest);
 }
 /**
  * new_dog - creates a new dog
@@ -45,15 +45,14 @@ char *_strcpy(char *dest, char *src)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int len1 = _strlen(name);
 	int len2 = _strlen(owner);
 
 	struct dog *dog = malloc(sizeof(struct dog));
 
 	if (dog == NULL)
-		return; (NULL)
+		return (NULL);
 
-	dog->name = malloc(len1 + 1);
+	dog->name = malloc(_strlen(name) + 1);
 	dog->owner = malloc(len2 + 1);
 
 	if (dog->name == NULL || dog->owner == NULL)
@@ -61,12 +60,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(dog->name);
 		free(dog->owner);
 		free(dog);
-		return; (NULL)
+		return (NULL);
 	}
 
 	_strcpy(dog->name, name);
 	_strcpy(dog->owner, owner);
 	dog->age = age;
 
-	return; (dog)
+	return (dog);
 }
