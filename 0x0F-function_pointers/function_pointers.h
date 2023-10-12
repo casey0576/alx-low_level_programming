@@ -1,5 +1,5 @@
-#define FUNCTION_POINTERS_H
-#include <stdio.h>
+#define FUNCTION_POINTER_H
+
 #include <stdlib.h>
 #include <stddef.h>
 
